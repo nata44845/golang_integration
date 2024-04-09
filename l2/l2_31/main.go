@@ -1,3 +1,4 @@
+// Знакомство с интерфейсом IO Writer
 package main
 
 import (

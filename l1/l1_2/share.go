@@ -1,3 +1,4 @@
+// Пространство имён в debugger
 package main
 
 var a int

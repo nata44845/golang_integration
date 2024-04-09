@@ -1,3 +1,4 @@
+// Возможности debugger
 package main
 
 func doPanic(a int) {

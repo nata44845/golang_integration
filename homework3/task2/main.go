@@ -31,8 +31,9 @@ func main() {
 	go func() {
 		defer wg.Done()
 		for {
+			s := <-ch
 			select {
-			case <-ch:
+			case s == 1:
 				fmt.Println("\nПрограмма завершает выполнение.")
 				close(ch)
 				return

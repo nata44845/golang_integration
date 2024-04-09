@@ -1,3 +1,4 @@
+// Пакеты IO и OS
 package main
 
 import (

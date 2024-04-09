@@ -1,3 +1,4 @@
+// Пакеты IO и OS. Угадай число
 package main
 
 import (

@@ -1,3 +1,4 @@
+// Знакомство с интерфейсом IO Reader
 package main
 
 import (
