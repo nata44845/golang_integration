@@ -33,14 +33,5 @@ func main() {
 
 	var r []string
 	r = generate_brackets(2*n, r, nil, 0)
-	str := "["
-	n = len(r)
-	for i, s := range r {
-		str += fmt.Sprintf("\"%s\"", s)
-		if i < n-1 {
-			str += ", "
-		}
-	}
-	str += "]"
-	fmt.Println(str)
+	fmt.Printf("\"%s\"]\n", strings.Join(r, "\", \""))
 }
