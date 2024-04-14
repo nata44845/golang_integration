@@ -1,3 +1,4 @@
+// git bash
 // curl -X POST -d '{"name":"Ilya","age":28,"friends":[]}' http://localhost:8080/user/create
 // curl -X POST -d '{"name":"Maxim","age":25,"friends":[]}' http://localhost:8080/user/create
 // curl -X GET http://localhost:8080/users
