@@ -1,3 +1,4 @@
+//http server с json, получает данные в формате json
 // curl -X POST -d '{"name": "Ivan", "age": 50}' http://localhost:8080/create
 
 package main

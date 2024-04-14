@@ -1,3 +1,4 @@
+//http server получает данные через пробел
 // curl -X POST -d "name 24" http://localhost:8080/create
 
 package main
