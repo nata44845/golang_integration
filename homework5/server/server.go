@@ -43,7 +43,7 @@ const (
 	minInt = -maxInt - 1
 )
 
-const fileName string = "users.txt"
+const fileName string = "users.json"
 
 func max(users map[int]*User) int {
 	var maxNumber int
@@ -59,9 +59,9 @@ func max(users map[int]*User) int {
 }
 
 type User struct {
-	Name    string  `json: "name"`
-	Age     int     `json: "age"`
-	Friends []*User `json:"friends"`
+	Name    string  `json: "Name"`
+	Age     int     `json: "Age"`
+	Friends []*User `json:"Friends"`
 }
 
 func (u *User) toString() string {
@@ -193,6 +193,7 @@ func (s *service) MakeFriends(w http.ResponseWriter, r *http.Request) {
 		if !idx {
 			s.LoadDataFromFile()
 			u1.Friends = append(u1.Friends, u2)
+			fmt.Println(s.store)
 			//Запись в файл json
 			err = s.SaveDataToFile()
 			if err != nil {
@@ -205,7 +206,7 @@ func (s *service) MakeFriends(w http.ResponseWriter, r *http.Request) {
 			w.Write([]byte(fmt.Sprintf("%s и %s теперь друзья", u1.Name, u2.Name)))
 		} else {
 			w.WriteHeader(http.StatusInternalServerError)
-			w.Write([]byte(fmt.Sprintf("Добавление приведет к зацикливанию списка")))
+			w.Write([]byte("Добавление приведет к зацикливанию списка"))
 		}
 	} else {
 		w.WriteHeader(http.StatusInternalServerError)

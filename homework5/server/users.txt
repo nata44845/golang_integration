@@ -1,1 +1,0 @@
-{"1":{"Name":"Andrey","Age":28,"friends":[]},"3":{"Name":"Ivan","Age":28,"friends":[]},"4":{"Name":"Maria","Age":28,"friends":[]}}
